@@ -9,3 +9,8 @@ const application = Application.start()
 const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
 StimulusReflex.initialize(application)
+
+// Imports for T-S-C
+// Options include Dropdown, Modal, Tabs, Popover, Toggle 
+import { Modal } from "tailwindcss-stimulus-components"
+application.register('modal', Modal)
